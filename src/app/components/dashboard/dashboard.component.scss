@@ -1,0 +1,228 @@
+// Additional styles for dashboard component
+// Most styles come from global styles.scss
+
+.result-value {
+  &.equal {
+    color: #16a34a !important;
+    background: #dcfce7;
+  }
+
+  &.not-equal {
+    color: #d97706 !important;
+    background: #fef3c7;
+  }
+}
+
+// Hide title spans based on screen size
+.full-title {
+  display: inline;
+}
+.short-title {
+  display: none;
+}
+
+.logout-text {
+  display: inline;
+}
+.logout-icon {
+  display: none;
+}
+
+// Nav link primary style
+.nav-link-primary {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+// History Preview Section
+.history-preview {
+  margin-top: 40px;
+}
+
+.history-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.view-all-link {
+  color: #5B6CFF;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #8B5CF6;
+  }
+}
+
+.history-preview-list {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.history-preview-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.3s ease;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background: #f8f9ff;
+  }
+}
+
+.preview-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(91, 108, 255, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  border-radius: 10px;
+}
+
+.preview-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.preview-type {
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: capitalize;
+}
+
+.preview-result {
+  font-weight: 600;
+  color: #333;
+}
+
+.preview-time {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+// Login Prompt Section
+.login-prompt {
+  margin-top: 40px;
+}
+
+.prompt-card {
+  background: linear-gradient(135deg, rgba(91, 108, 255, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+  border: 2px dashed #5B6CFF;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+}
+
+.prompt-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.prompt-card h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.prompt-card p {
+  color: #666;
+  margin-bottom: 25px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prompt-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.prompt-btn {
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.prompt-btn-primary {
+  background: linear-gradient(135deg, #5B6CFF 0%, #8B5CF6 100%);
+  color: #fff;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(91, 108, 255, 0.4);
+  }
+}
+
+.prompt-btn-secondary {
+  background: #fff;
+  color: #5B6CFF;
+  border: 2px solid #5B6CFF;
+
+  &:hover {
+    background: #f8f9ff;
+  }
+}
+
+@media (max-width: 768px) {
+  .full-title {
+    display: none;
+  }
+  .short-title {
+    display: inline;
+  }
+  .logout-text {
+    display: none;
+  }
+  .logout-icon {
+    display: inline;
+  }
+
+  .history-preview-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .history-preview-item {
+    flex-wrap: wrap;
+  }
+
+  .preview-time {
+    width: 100%;
+    text-align: right;
+    margin-top: 5px;
+  }
+
+  .prompt-card {
+    padding: 30px 20px;
+  }
+
+  .prompt-buttons {
+    flex-direction: column;
+  }
+
+  .prompt-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
